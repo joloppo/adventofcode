@@ -1,0 +1,8 @@
+_default:
+    @just --list
+
+set dotenv-load := true
+
+
+aoc day:
+    uv run -m aoc.day{{day}}
