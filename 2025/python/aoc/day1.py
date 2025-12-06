@@ -4,9 +4,7 @@ def solve(text: str) -> str:
     current_counter = 0
     for v in parsed:
         # current_value, current_counter = advance(current_value, current_counter, v)
-        current_value, current_counter = advance_part2(
-            current_value, current_counter, v
-        )
+        current_value, current_counter = advance_part2(current_value, current_counter, v)
     return str(current_counter)
 
 
