@@ -8,4 +8,4 @@ aoc day:
     uv run -m aoc.day{{day}}
 
 test day:
-    uv run pytest aoc/day{{day}}.py
+    uv run pytest aoc/day{{day}}.py -s
