@@ -36,7 +36,7 @@ def int_convert(_tuple: tuple) -> int | None:
 
 def parse_input_part2(text: str) -> tuple[list[list[int]], list[str]]:
     lines = text.splitlines()
-    instructions = lines[-1].split(
+    instructions = lines[-1].split()
     lines = lines[:-1]
     lines = list(filter(lambda x: bool(x.strip()), lines))
     max_len = max([len(line) for line in lines])

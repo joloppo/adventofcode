@@ -4,7 +4,7 @@ _default:
 set dotenv-load := true
 
 
-aoc day:
+run day:
     uv run -m aoc.day{{day}}
 
 test day:
