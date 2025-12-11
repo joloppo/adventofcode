@@ -1,0 +1,11 @@
+_default:
+    @just --list
+
+set dotenv-load := true
+
+
+run day:
+    cargo run --bin day{{day}}
+
+test day:
+    cargo test --bin day{{day}}
