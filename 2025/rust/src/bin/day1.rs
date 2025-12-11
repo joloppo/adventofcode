@@ -25,7 +25,6 @@ fn main() {
     num_iterator.clone().fold(50, |acc, x| {
         let new = acc + x;
         let mut new_count = ((new - 50).abs() + 50) / 100;
-        println!("{} {} {} {}", acc, x, new, new_count);
 
         // from zero going left
         if new < 0 && acc == 0 {
