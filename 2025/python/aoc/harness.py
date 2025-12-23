@@ -1,5 +1,6 @@
-import requests
 from pathlib import Path
+
+import requests
 from pydantic_settings import BaseSettings
 
 YEAR = 2025
@@ -14,11 +15,11 @@ class AOCSettings(BaseSettings):
 
 
 def _cache_input(content: str, day: int) -> None:
-    (CACHE_DIR / f"input_day_{day}").write_text(content)
+    (CACHE_DIR / f"day{day}.txt").write_text(content)
 
 
 def _check_cache(day: int) -> str | None:
-    path = CACHE_DIR / f"input_day_{day}"
+    path = CACHE_DIR / f"day{day}.txt"
     if path.exists():
         return path.read_text()
     return None
