@@ -4,7 +4,9 @@ def solve(text: str) -> str:
     current_counter = 0
     for v in parsed:
         # current_value, current_counter = advance(current_value, current_counter, v)
-        current_value, current_counter = advance_part2(current_value, current_counter, v)
+        current_value, current_counter = advance_part2(
+            current_value, current_counter, v
+        )
     return str(current_counter)
 
 
@@ -49,9 +51,9 @@ def advance_part2(current_value: int, counter: int, lr_value: int) -> tuple[int,
 
 
 if __name__ == "__main__":
-    from .harness import get_puzzle_input
+    from .harness import day_from_filename, get_puzzle_input
 
-    _input = get_puzzle_input(1)
+    _input = get_puzzle_input(day_from_filename(__file__))
     solution = solve(_input)
     print("---Solution---")
     print(solution)

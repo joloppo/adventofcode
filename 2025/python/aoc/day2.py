@@ -41,9 +41,9 @@ def split_parse(text: str) -> list[Range]:
 
 
 if __name__ == "__main__":
-    from .harness import get_puzzle_input
+    from .harness import day_from_filename, get_puzzle_input
 
-    _input = get_puzzle_input(2)
+    _input = get_puzzle_input(day_from_filename(__file__))
     solution = solve2(_input)
     print("---Solution---")
     print(solution)

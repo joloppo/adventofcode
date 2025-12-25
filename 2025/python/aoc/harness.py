@@ -39,3 +39,7 @@ def get_puzzle_input(day: int) -> str:
     text = response.text
     _cache_input(text, day)
     return text
+
+
+def day_from_filename(filename: str) -> int:
+    return int(filename.split(".")[-2].split("day")[-1])
